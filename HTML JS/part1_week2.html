@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+    
+</head>
+<body onLoad = do_game()>
+
+    
+<script>
+   
+function do_game() {
+var colors = ["blue", "cyan", "gold", "grey", "green", "magenta", "orange", "red", "white", "yellow"],
+    tries = 0,
+    colorsText = colors.join(", "),
+    rand = Math.floor(Math.random() * 10), 
+    randColor = colors[rand],
+    again = true;
+
+    while (again) {
+        var userChoice = prompt("I am thinking of one of these colors" + "\n" + "\n" + colorsText
+           +"\n" + "\n"   + "What color am I thinking of?");
+        if (userChoice == randColor)
+            again = false;
+    }
+}
+    
+</script>
+</body>
+</html>

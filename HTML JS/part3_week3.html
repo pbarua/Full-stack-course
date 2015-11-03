@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Week 3</title>
+    
+</head>
+ 
+ <style>
+    img {
+        position: absolute;
+    }
+     
+    div {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+    }
+     
+    #rightSide {
+        left: 500px;
+        border-left: 1px solid black;
+    }
+</style>
+    
+<body onload="createSmiley()">
+
+    <h2> Matching Game</h2>
+    <h4>Click on the extra smiling face on the left</h4>
+    
+    <div id="leftSide">
+    
+    </div>
+    
+    <div id="rightSide">
+    
+    </div>
+    
+<script>
+    var numberOfFaces = 5;
+    var theLeftSide = document.getElementById("leftSide");
+    var theRightSide = document.getElementById("rightSide");
+    
+function createSmiley () {
+    var i = 0,
+        locTop = 0,
+        locLeft = 0,
+        smiley = "";
+    
+    
+    while (i < numberOfFaces) {
+        i++;
+        smiley = document.createElement("img");
+        smiley.src = "http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
+        smiley.setAttribute("height", "50");
+        smiley.setAttribute("width", "50");
+        locTop = Math.floor((Math.random()) * 450);
+        locLeft = Math.floor((Math.random()) * 450);
+        theLeftSide.appendChild(smiley);
+        theLeftSide.lastChild.style.left = locLeft + "px";
+        theLeftSide.lastChild.style.top = locTop + "px"; 
+    }
+    
+        var leftSideImages = theLeftSide.cloneNode(true);
+        var delNode = leftSideImages.lastChild;
+        delNode.parentNode.removeChild(delNode);
+        theRightSide.appendChild(leftSideImages);
+        
+        
+        
+}
+    
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+         <meta charset="utf-8">
+    </head>
+    
+    <style>
+    fieldset {
+        background: lightyellow;
+        border: 10px solid yellow;
+        margin-bottom: 10px;
+        width: 720px;
+    }
+    label {
+        width: 180px;
+        display: inline-block;
+        text-align: right;
+        vertical-align: top;
+    }
+    textarea {
+        width: 360px;
+        height: 50px;
+    }
+    #slider {
+        text-align: right;
+        width: 40px;
+    }
+    #butchk {
+        width: auto;
+    }
+    </style>
+    <body>
+        
+      <h1>Please Enter Your Details For Our Dating Website!</h1>
+        
+      <form  action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+        <fieldset> 
+            <legend>Your Face  </legend>
+                <label for="avatar">Your image: </label>
+                <input type="file" id="avatar" name="avatar" required> <br>
+                <label for="preview">Image preview: </label><img id="preview">
+        </fieldset>
+        <br>
+        <fieldset> 
+            <legend>Your General Details</legend>
+            <label for="name">Name  :</label>
+            <input type="text" name="name" required> <br>
+                
+            <label for="gender" >Gender: </label>    
+            <input type="radio" name="gender" value="male" required>
+            <label for="butchk" id="butchk">Male</label>
+            <input type="radio" name="gender" value="female" required>
+            <label for="butchk" id="butchk">Female</label><br>
+            <label for="age"> Age:</label>
+            <input type=number name="age" required> <br>
+            <label for="dob">Date of Birth:</label>     
+            <input type="date" name="dob"> <br>
+            <label for="color"> Favourite color:</label>
+            <input type="color" name="color"> <br>    
+            <label for="country">Which country:</label>    
+                <select name="country">
+                    <option > </option>
+                    <option value="ind">India</option>
+                    <option value="chi">China</option>
+                    <option value="usa">USA</option>
+                    <option value="rus">Russia</option>
+                    <option value="sud">Sudan</option>    
+                </select>
+        </fieldset> 
+        <br>
+        <fieldset> 
+            <legend>Your indicators </legend>
+            <label for="height" >Height: </label>
+            <label for="slider" id="slider">Short </label>
+            <input type="range" min="0" max="100" name="height"> 
+            <label for="height" id=slider>Tall</label> <br>
+            <label for="salary" > Salary:    </label>
+            <label for="slider" id="slider">Poor </label>
+            <input type="range" min="0" max="100" name="salary"> 
+            <label for="salary" id="slider">Rich</label>
+            
+        </fieldset>
+        <br>
+        <fieldset> 
+            <legend>Your Contact Information</legend>
+            <label for="email">Email:</label> 
+            <input type="email" name="email" required> <br>
+            <label for="mobile">Mobile:</label> 
+            <input type="tel" name="mobile"> <br>
+            <div ><label id="vertical" for="address">Address: </label>
+                <textarea rows="3" cols="60" name="address">
+                </textarea><br> 
+            </div>
+            <label for="contact">Method to contact you:</label>    
+            <input type="checkbox" name="contact" value="email">
+            <label for="butchk" id="butchk">Email</label>
+            <input type="checkbox" name="contact" value="whatsapp">
+            <label for="butchk" id="butchk">Whatsapp</label>
+            <input type="checkbox" name="contact" value="chat">
+            <label for="butchk" id="butchk">in-app chat </label>
+        </fieldset>
+          
+          <input type="submit" value=Submit>
+      </form>
+    </body>
+
+</html>
