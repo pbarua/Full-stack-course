@@ -1,0 +1,26 @@
+{
+  "name": "confusion",
+  "homepage": "https://github.com/pbarua/Full-stack-course",
+  "authors": [
+    "Prayag <pbarua@pobox.com>"
+  ],
+  "description": "Website Coursera",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "confusion",
+    "restaurant"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  }
+}
